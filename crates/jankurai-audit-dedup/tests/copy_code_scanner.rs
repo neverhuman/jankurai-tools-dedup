@@ -17,7 +17,10 @@ fn normalize_collapses_internal_whitespace() {
 
 #[test]
 fn normalize_trims_leading_and_trailing_whitespace() {
-    assert_eq!(normalize_token_line("   foo()  "), normalize_token_line("foo()"));
+    assert_eq!(
+        normalize_token_line("   foo()  "),
+        normalize_token_line("foo()")
+    );
 }
 
 #[test]
@@ -26,7 +29,10 @@ fn rust_unit_name_reads_function_signatures() {
         rust_unit_name("pub fn scan_repo(repo: &Path) -> Result<()> {"),
         Some("scan_repo".to_string()),
     );
-    assert_eq!(rust_unit_name("    fn helper() {"), Some("helper".to_string()));
+    assert_eq!(
+        rust_unit_name("    fn helper() {"),
+        Some("helper".to_string())
+    );
 }
 
 #[test]
