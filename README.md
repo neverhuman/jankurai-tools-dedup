@@ -1,6 +1,8 @@
 # jankurai-tools-dedup
 
-[![jankurai audit](agent/jankurai-badge.svg)](agent/jankurai-badge.json)
+<!-- jankurai-badge:start -->
+[![Jankurai score: 95/100](agent/jankurai-badge.svg)](agent/jankurai-badge.json)
+<!-- jankurai-badge:end -->
 
 Copy-code redundancy scanner for the **jankurai** audit standard. This crate
 detects exact file duplication, exact unit duplication, and high-confidence
